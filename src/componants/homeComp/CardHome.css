@@ -1,0 +1,174 @@
+.Card-Home-Slider{
+  padding: 1rem .5rem;
+  max-width: 250px;
+  height: 480px;
+  background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    &:hover > .Card-Header  .Card-Header-Content  .Card-Img  img {
+      transform: scale(1.1);
+      filter: grayscale(0);
+    }
+    &:hover > .Card-Header  .Card-Header-Content  > span {
+    animation: tada 1s ease ;
+    }
+  & > .Card-Header{
+    height: 50%;
+    & > .Card-Header-Content{
+      height: 100%;
+      position: relative;
+      & > .Card-Img{
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 25px;
+        & > span {
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          padding: .2rem 1.5rem;
+          background: rgba(223, 26, 11, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(9px);
+            -webkit-backdrop-filter: blur(9px);
+            border-radius: 25px 10px 10px 10px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            
+          
+        }
+        & > .Card-Price{
+          bottom: 0;
+          top: unset;
+          background-color: var(--sub-color-text);
+          color: var(--text-logo);
+        }
+        & > img {
+          filter: grayscale(100%);
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: all .5s ease;
+        }
+      }
+      & > span {
+        position: absolute;
+        top: -10px;
+        right: 0px;
+        padding: .5rem ;
+        background: rgba(255, 255, 255, 0.1);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          backdrop-filter: blur(9px);
+          -webkit-backdrop-filter: blur(9px);
+          border-radius: 10px;
+          border: 1px solid rgba(255, 255, 255, 0.18);
+        color: var(--text-logo);
+        cursor: pointer;
+        
+        
+      }
+    }
+  }
+  & > .Card-Body{
+    padding: .5rem 0;
+    height: 50%;
+    & >.Card-Body-Content{
+      height: 100%;
+      flex-direction: column;
+      justify-content: space-between;
+      display: flex;
+      & > .Card-Content-Text{
+        margin: 0;
+        & > .Card-Title {
+          font-size: 1.5rem;
+          font-weight: 500;
+          font-family:var(--text-font-main) ;
+          letter-spacing: 2px;
+          width: fit-content;
+          border-bottom:1px solid var(--bs-info) ;
+        }
+        & > .Card-Text{
+          overflow: hidden;
+          width: 100%;
+          font-size: 1rem;
+          font-weight: 400;
+          font-family:var(--text-font-main) ;
+          letter-spacing: 1px;
+          height: 96px;
+          line-height: 1.5rem;
+          text-indent: 15px;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+
+@-webkit-keyframes tada {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%,
+  20% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%,
+  60%,
+  80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes tada {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%,
+  20% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%,
+  60%,
+  80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}

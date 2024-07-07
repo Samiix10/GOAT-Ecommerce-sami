@@ -1,0 +1,239 @@
+.Fifth-section-home {
+  padding: 5rem 0;
+  & > .Fifth-section-container {
+    & > .FifthContainer {
+      & > .FifthSectionHeader {
+        & > .FifthHeaderContent {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 1rem;
+          position: relative;
+          & > .ImgIcon {
+            display: block;
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            > img {
+              width: 100%;
+              object-fit: contain;
+            }
+          }
+          & > .fifthHeaderText {
+            font-size: 1.5rem;
+            font-family: var(--text-font-main);
+            font-weight: 800;
+            text-transform: capitalize;
+            letter-spacing: 2px;
+            margin: 0;
+            /* & > span {
+              color: var(--new-color);
+              font-size: 2rem;
+              text-transform: uppercase;
+            }
+            & > i {
+              font-size: 1.9rem;
+              color: var(--bs-info);
+              margin-left: -3px;
+            } */
+            &::selection {
+              background-color: var(--new-color);
+            }
+          }
+        }
+      }
+      & > .RowContainer {
+        margin: 0 auto;
+        & > .FifthColContainer {
+          padding: 0;
+          & > .FifthBoxContainer {
+            width: 100%;
+            height: 100%;
+            padding: 0.5rem;
+            & > .FifthBoxContent {
+              width: 100%;
+              height: 100%;
+              position: relative;
+              overflow: hidden;
+              & > .FifthBoxImg {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                & > img {
+                  width: 100%;
+                  object-fit: cover;
+                  aspect-ratio: 1/1.5;
+                }
+              }
+              & > .FifthBoxTextContent {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+                background: rgba(39, 38, 38, 0.4);
+                box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+                & > .BoxtextHeader {
+                  font-size: 1.2rem;
+                  font-family: var(--text-font-main);
+                  font-weight: 500;
+                  text-transform: capitalize;
+                  margin: 0;
+                  letter-spacing: 1px;
+                  position: relative;
+                  &::after {
+                    position: absolute;
+                    top: 150%;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    content: "";
+                    background-color: var(--sub-color-text);
+                  }
+                }
+                & > .boxTextContainer {
+                  & > .BoxtextText {
+                    font-size: 1.2rem;
+                    font-family: var(--text-font-main);
+                    font-weight: 600;
+                    text-transform: capitalize;
+                    margin: 0;
+                    letter-spacing: 1px;
+                    transition: all .3s ease;
+                  }
+                  & > .BoxTextSub {
+                    font-size: 1.4rem;
+                    font-family: var(--text-font-main);
+                    font-weight: 400;
+                    text-transform: capitalize;
+                    margin: 0 0 8px 0;
+                    letter-spacing: 1px;
+                    transition: all .3s ease;
+                  }
+                  & > .BoxTextPragraph {
+                    font-size: 1rem;
+                    font-family: var(--text-font-main);
+                    font-weight: 500;
+                    text-transform: capitalize;
+                    margin: 0;
+                    letter-spacing: 1px;
+                  }
+                }
+                & > .BoxButtonLink {
+                  & > .BoxLinkTo {
+                    font-size: 1.1rem;
+                    font-weight: 800;
+                    text-transform: capitalize;
+                    letter-spacing: 2px;
+                    background-color: var(--new-color);
+                    padding: 0.5rem 1rem;
+                    border-radius: 10px;
+                    display: block;
+                    overflow: hidden;
+                    position: relative;
+                    & > a {
+                      position: relative;
+                      z-index: 2;
+                      transform: all 0.3s ease;
+                    }
+                    &::after {
+                      content: "";
+                      width: 50px;
+                      height: 50%;
+                      background-color: #0dcaf0ae;
+                      position: absolute;
+                      backdrop-filter: blur(6px);
+                      -webkit-backdrop-filter: blur(6px);
+                      bottom: -50%;
+                      left: 50%;
+                      transform: translateX(-50%);
+                      border-radius: 30% 50% 5% 5% / 100% 100% 5% 5%;
+                      transition: all 0.3s ease;
+                    }
+                    &:hover::after {
+                      width: 150%;
+                      height: 150%;
+                      bottom: 0;
+                    }
+                    &:hover > a {
+                      color: var(--new-color);
+                    }
+                  }
+                }
+              }
+            }
+            &:hover
+              > .FifthBoxContent
+              > .FifthBoxTextContent
+              > .boxTextContainer
+              > .BoxtextText , &:hover > .FifthBoxContent > .FifthBoxTextContent > .boxTextContainer > .BoxTextSub
+              {
+              color: var(--sub-color-text);
+              font-weight: 900;
+            }
+          }
+        }
+      }
+    }
+    & > .Fifth-Home-footer {
+      & > span {
+        overflow: hidden;
+
+        & > a {
+          padding: 0.8rem 1rem;
+          border-radius: 20px;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          font-weight: 600;
+          background-color: var(--new-color);
+          position: relative;
+          display: block;
+          width: fit-content;
+          margin: 0 auto;
+          overflow: hidden;
+          transition: all 0.3s ease;
+
+          &:hover {
+            color: var(--new-color);
+          }
+
+          & > span {
+            position: relative;
+            z-index: 2;
+          }
+
+          &::after {
+            content: "";
+            width: 0%;
+            height: 110%;
+            position: absolute;
+            right: -10%;
+            top: -2px;
+            z-index: 1;
+            box-shadow: 0px 2.5px 24.6px rgba(0, 0, 0, 0.02),
+              0px 20px 33px rgba(0, 0, 0, 0.04);
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            transition: all 0.3s ease;
+          }
+
+          &:hover::after {
+            left: -10%;
+            width: 115%;
+          }
+        }
+      }
+    }
+  }
+}

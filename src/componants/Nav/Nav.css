@@ -1,0 +1,335 @@
+nav.navbar {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  color: var(--main-color-text) !important;
+  padding: 1rem 0;
+  & .container {
+    & .Logo {
+      width: 150px;
+      height: 50px;
+      overflow: hidden;
+      & > a {
+        & > img {
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+    & .collapse {
+      & .navbar-nav {
+        & .nav-item {
+          & .nav-link {
+            color: var(--main-color-text);
+            font-family: var(--text-font-main);
+            font-size: 1.3rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 2;
+            padding: 0.5rem 1rem;
+            &.active {
+              color: var(--sub-color-text);
+            }
+            &:hover {
+              color: var(--sub-color-text);
+            }
+          }
+        }
+        & .nav-item.dropdown {
+          & .dropdown-menu {
+            left: -390%;
+            top: 120%;
+            width: 1500px;
+            display: none;
+            &.show {
+              display: flex;
+              justify-content: space-between;
+              & > .DropMenuItemsContainer {
+                display: flex;
+                flex-direction: column;
+                & > ul {
+                  flex-grow: 1;
+                }
+                & > .nav-Item-card {
+                  & > .nav-item-cart-info {
+                    & > .Cart-Price {
+                      font-family: var(--text-font-main);
+                      font-weight: 800;
+                      letter-spacing: 2px;
+                    }
+                    & > .Cart-Menu-Link {
+                      & > a {
+                        color: var(--main-color-text);
+                        font-family: var(--text-font-main);
+                        text-transform: capitalize;
+                        font-weight: 500;
+                        letter-spacing: 1px;
+                        background-color: var(--new-color);
+                        padding: 0.5rem 1.5rem;
+                        margin-left: 1.5rem;
+                        border-radius: 10px;
+                        &:hover {
+                          color: var(--new-color);
+                          background-color: var(--sub-color-bg);
+                          text-shadow: 0px 1px 5px var(--main-color-bg);
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            & .dropdown-item {
+              text-align: center;
+              font-family: var(--text-font-main);
+              font-size: 1.3rem;
+              font-weight: 500;
+              letter-spacing: 1px;
+              color: var(--main-color-bg);
+              &:hover {
+                color: var(--main-color-text);
+                background-color: var(--new-color);
+              }
+            }
+          }
+        }
+      }
+    }
+    & > .Info-Actions {
+      & > .d-flex {
+        & > .nav-item {
+          position: relative;
+          & > .CartText {
+            position: relative;
+            z-index: 2;
+            & > .nav-link {
+              color: var(--main-color-text);
+              font-family: var(--text-font-main);
+              font-size: 1.3rem;
+              font-weight: 500;
+              letter-spacing: 1px;
+              padding: 0.5rem 1rem;
+              &:hover {
+                color: var(--sub-color-text);
+              }
+            }
+          }
+          & > .CartQuntity {
+            position: absolute;
+            right: -5px;
+            background-color: var(--new-color);
+            border-radius: 5px;
+            text-align: center;
+            font-size: 1rem;
+            padding: 0.2rem 0.5rem;
+            line-height: normal;
+            text-shadow: 0px 1px 1px var(--main-color-bg);
+          }
+        }
+      }
+    }
+  }
+}
+.dropdown-toggle::after {
+  border: unset;
+  content: "+";
+  margin: 0;
+  top: 50%;
+  right: 0;
+  position: absolute;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+}
+.dropdown-toggle:has(+ .dropdown-menu.main-menu.show)::after {
+  content: "-";
+}
+.dropdown-toggle.Offcanvac:has(+ .dropdown-menu.main-menu.show)::after {
+  content: "-";
+  top: 0;
+  transform: translateY(10px);
+}
+
+.offcanvas {
+  & > .offcanvas-header {
+    background: var(--main-color-bg);
+    color: var(--main-color-text);
+  }
+  & > .offcanvas-body {
+    & > ul {
+      & > .nav-item.Offcanvac {
+        border-bottom: 2px solid var(--text-logo);
+        & > .nav-link.Offcanvac {
+          padding: 1rem 0;
+          font-family: var(--text-font-main);
+          font-size: 1.1rem;
+          font-weight: 800;
+          letter-spacing: 1px;
+        }
+      }
+      & > .dropdown.Offcanvac {
+        & > .dropdown-menu.Offcanvac.show {
+          position: static !important;
+          transform: none !important;
+          border-top: none;
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+          & > .DropMenuItemsContainer.Offcanvac {
+            & > ul {
+              & > li {
+                padding: .1rem;
+                & > .dropdown-item.Offcanvac , & > .dropdown-item{
+                  font-weight: 600 ;
+                  background-color: var(--new-color);
+                  color: var(--main-color-text);
+                  letter-spacing: 1px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    & .form-control:focus {
+      border-color: var(--main-color-bg);
+      box-shadow: 0 0 0 0.25rem #3c425180;
+    }
+  }
+}
+.nav-item.Cart,
+.nav-item.Liked {
+  position: relative;
+  & > a {
+    z-index: 2;
+    position: relative;
+  }
+  & > span {
+    font-family: var(--text-font-main);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: normal;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    color: var(--main-color-text);
+    background-color: var(--new-color);
+    position: absolute;
+    z-index: 1;
+    left: 46%;
+    top: 15px;
+  }
+}
+.user-Menu{
+  position: relative;
+  &::after {
+    content: "+";
+    position: absolute;
+    right: -10px;
+    font-size: 1.2rem;
+    font-weight: 900;
+  }
+  &:has(+ .dropdown-menu.user-Drop-Menu.show )::after{
+    content: "-";
+  }
+}
+.dropdown-menu.user-Drop-Menu{
+  left: -20px;
+  min-width: fit-content;
+  background-color: var(--bs-primary);
+  & > .DropUserInfo{
+    & > a {
+      padding: .2rem .5rem;
+      &:hover {
+        color: var(--sub-color-text);
+      }
+    }
+    
+  }
+}
+.Offcanvac.UserItem{
+  padding: .5rem ;
+  &:has(> .Offcanvac.user-Drop-Menu.show){
+    padding: .5rem 0 0 0;
+  }
+  & > .Offcanvac.user-Menu{
+    &::after {
+      left: 55%;
+    }
+  }
+  & > .Offcanvac.user-Drop-Menu{
+    padding: .5rem 0 ;
+    border-radius: none;
+    & > .DropUserInfo{
+      text-align: center;
+        padding: .2rem 0;
+      
+    }
+  }
+}
+@media (width < 1565px) {
+  .collapse.navbar-collapse.Main {
+    display: none !important;
+  }
+  nav.navbar {
+    & .container {
+      & .navbar-nav {
+        & .nav-item.dropdown {
+          & .dropdown-menu {
+            left: 0 !important;
+            width: fit-content !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (width > 1565px) {
+  .collapse.navbar-collapse.Sub {
+    display: none !important;
+  }
+}
+
+
+nav.stiky{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding-bottom: .5rem;
+background: rgba(60, 66, 81, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  animation: fadeInDown .5s ease 1;
+  z-index: 1000;
+}
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}

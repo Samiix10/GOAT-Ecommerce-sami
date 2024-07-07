@@ -1,0 +1,49 @@
+.third-home{
+  padding: 2rem 0 3rem;
+  & > .Thied-Container {
+    background-color: var(--secound-color-bg);
+    & > .container{
+      padding: 1rem 0;
+      & > .row {
+        width: 100%;
+          & > .Row-Cols{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            & > .box-third-content {
+              padding: 2.5rem;
+              & > .Box-icon{
+                text-align: center;
+              }
+              & > .Box-content{
+                text-align: center;
+                padding: 1rem 0 0 0;
+                & > p {
+                  font-size: 1.5rem;
+                  letter-spacing: 1px;
+                  font-weight: 500;
+                  margin: 0;
+                }
+              }
+            }
+          }
+      }
+    }
+  }
+}
+
+@media (width < 600px) {
+  .third-home {
+      &>.Thied-Container {
+        &>.container {
+          &>.row {
+            &>.Row-Cols {
+              &>.box-third-content {
+                padding: 1rem 0 ;
+                }
+              }
+            }
+          }
+        }
+      }
+    }

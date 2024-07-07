@@ -1,0 +1,38 @@
+.secound-home-section{
+  padding: 8rem 0 6rem;
+  & >  .container {
+  & > .secound-home-section-content {
+    border-block-start: 1px solid #ffffff1f;
+    border-block-end: 1px solid #ffffff1f;
+    & > .content-text{
+      padding: 3rem 0;
+      text-align: center;
+      & > .content-header{
+        font-size: 1.6rem;
+        font-weight: 400;
+        font-family:var(--text-font-main) ;
+        text-transform: uppercase;
+        margin: 0;
+        > span {
+          color: var(--bs-info);
+          font-weight: 400;
+          letter-spacing: 1px;
+        }
+      }
+      > p {
+        font-size: 1.2rem;
+        font-weight: 400;
+        font-family:var(--text-font-main) ;
+        letter-spacing: 1px;
+        line-height: 1.6rem;
+        margin: 1.5rem 0 0 0;
+        > span {
+          color: var(--bs-teal);
+          font-weight: 800;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}
+}

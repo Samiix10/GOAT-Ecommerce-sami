@@ -1,0 +1,63 @@
+.AnimationField{
+  overflow: hidden;
+  width: 100%;
+  user-select: none;
+  & > h1 {
+    padding: 0;
+    margin: 0;
+    font-family: var(--login-font);
+    font-weight: 700;
+    width: fit-content;
+    padding: .5rem 0;
+    animation: Translation 20s linear infinite;
+    & > .AnimationLetter {
+      animation: flash 2s ease infinite;
+      font-weight: 900;
+    }
+  }
+}
+@media (width < 450px) {
+ .PhoneContact{
+  display: flex;
+  flex-direction: column;
+ }
+}
+
+
+/* ------- */
+@-webkit-keyframes flash {
+
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+@keyframes Translation {
+  from {
+    transform: translateX(-100%);
+  }
+  to{
+    transform: translateX(290%);
+  }
+}

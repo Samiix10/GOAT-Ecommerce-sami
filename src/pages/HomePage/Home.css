@@ -1,0 +1,55 @@
+.home {
+  padding: 9rem 0 3rem 0;
+  & > .container-fluid {
+    padding: 0;
+    & > .HomeHeader {
+      padding: .5rem 0;
+      & > span {
+        font-family: var(--text-font-main);
+        font-size: 1.5rem;
+        letter-spacing: 3px;
+        text-transform: capitalize;
+        font-weight: 600;
+      }
+      & > h1 {
+        font-size: clamp(2rem, 1.5rem + 2vw, 4rem);
+        text-transform: uppercase;
+        margin: 5px 0 0 0;
+      }
+    }
+    & > .HomeContent{
+      width: 100%;
+      padding: 1rem 0;
+      & > .swiper{
+        padding:0 0 4rem 0;
+        & > .swiper-wrapper {
+          & > .swiper-slide {
+            cursor: grab;
+            width: fit-content !important;
+          }
+        }
+        & > .swiper-button-next , .swiper-button-prev{
+          color: var(--new-color);
+          background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(9px);
+            -webkit-backdrop-filter: blur(9px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            top: 90%;
+            margin-top: 0;
+          &::after{
+            font-size: 1.5rem;
+            font-weight: 900;
+          }
+        }
+        & > .swiper-button-next{
+          right: 30%;
+        }
+        & > .swiper-button-prev{
+          left: 30%;
+        }
+      }
+    }
+  }
+}
