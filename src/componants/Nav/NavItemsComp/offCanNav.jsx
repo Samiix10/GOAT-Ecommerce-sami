@@ -43,7 +43,7 @@ const NavOffCan = () => {
         <Offcanvas.Body>
           <ul>
             <li className="nav-item Offcanvac">
-              <Link className="nav-link Offcanvac" to="/" data-path="/">
+              <Link className="nav-link Offcanvac" to="/" data-path="/" onClick={handleClose}>
                 Home
               </Link>
             </li>
@@ -64,6 +64,7 @@ const NavOffCan = () => {
                       <Link
                         className="dropdown-item Offcanvac"
                         to="/All-prudacts"
+                        onClick={handleClose}
                       >
                         all prudacts
                       </Link>
@@ -72,17 +73,18 @@ const NavOffCan = () => {
                       <Link
                         className="dropdown-item Offcanvac"
                         to="/Prudacts-Catigorys"
+                        onClick={handleClose}
                       >
                         Categories
                       </Link>
                     </li>
-                    <CategoriesList Data={Catigory} />
+                    <CategoriesList close={handleClose} Data={Catigory} />
                   </ul>
                 </div>
               </div>
             </li>
             <li className="nav-item Cart Offcanvac">
-              <Link className="nav-link Offcanvac " to="/Cart">
+              <Link className="nav-link Offcanvac " to="/Cart" onClick={handleClose}>
                 Cart
               </Link>
               <span className="CartQuntity Offcanvac">{cartquntity}</span>
@@ -92,6 +94,7 @@ const NavOffCan = () => {
                 className="nav-link  Offcanvac 
                     "
                 to="/liked-Prudact"
+                onClick={handleClose}
               >
                 liked
               </Link>
@@ -103,8 +106,8 @@ const NavOffCan = () => {
                     <i className="fa-solid fa-user fa-2xl" style={{color: "#000"}}></i>
                 </span>
                 <ul className="dropdown-menu Offcanvac user-Drop-Menu" id="Drop">
-                  <li className="DropUserInfo"><Link to={"/"}>login</Link></li>
-                  <li className="DropUserInfo"><Link to={"/"}>register</Link></li>
+                  <li className="DropUserInfo"><Link to={"/"} onClick={handleClose}>login</Link></li>
+                  <li className="DropUserInfo"><Link to={"/"} onClick={handleClose}>register</Link></li>
                 </ul>
               </li>
           </ul>
@@ -122,6 +125,7 @@ const NavOffCan = () => {
             <Link
               to={`/search/${inputValue}`}
               className="btn btn-outline-info "
+              onClick={handleClose}
             >
               Search
             </Link>

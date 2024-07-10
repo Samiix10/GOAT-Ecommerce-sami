@@ -3,6 +3,7 @@ import "./CardHome.css";
 import { useRecoilState } from "recoil";
 import LikedItems from "../RecoilAtoms/liked.Atom";
 import { Link } from "react-router-dom";
+import toast from "react-hot-toast";
 const CardHome = (props) => {
   const item = props.item;
   const [liked, setliked] = useRecoilState(LikedItems);
@@ -11,11 +12,12 @@ const CardHome = (props) => {
       return product.id;
     });
     if (likedProductsids.includes(item.id)) {
-      alert("liked product");
+       toast.error('This Item in your liked list!');
     } else {
       setliked( (prevCart) =>  [...prevCart, { ...item }] );
       localStorage.setItem('liked', JSON.stringify([...liked,{...item , liked : true}]));
       console.log(liked)
+      toast.success('Product added to liked list!');
     }
   }
   function watchLikedProducts(item) {
@@ -69,7 +71,7 @@ const CardHome = (props) => {
           </div>
           <div className="Card-Actions text-center">
             <button className="btn btn-outline-info">
-              <Link to={item.image ?  `/Get-prodact-Detail/${item.id}` : `/Get-Prodact-Details/${item.id}`}>View Details</Link>
+              <Link to={`/Get-Prodact-Details/${item.id}`}>View Details</Link>
             </button>
           </div>
         </div>

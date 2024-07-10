@@ -28,16 +28,16 @@ const NavItems1 = () => {
                   <div className="DropMenuItemsContainer">
                     <ul className="h-100">
                       <li>
-                        <Link className="dropdown-item" to="/All-prudacts">
+                        <Link className="dropdown-item text-capitalize" to="/All-prudacts">
                           all prudacts
                         </Link>
                       </li>
                       <li>
                         <Link
-                          className="dropdown-item"
+                          className="dropdown-item text-capitalize"
                           to="/Prudacts-Catigorys"
                         >
-                          go to all Categories
+                           all Categories page
                         </Link>
                       </li>
                     </ul>
@@ -64,7 +64,8 @@ const NavItems2 = () => {
                 <Link className="nav-link" to="/" data-path="/">
                   Home
                 </Link>
-              </li>
+        </li>
+        
               <li className="nav-item dropdown">
                 <span
                   className="nav-link dropdown-toggle"
@@ -79,47 +80,42 @@ const NavItems2 = () => {
                   <div className="DropMenuItemsContainer">
                     <ul className="h-100">
                       <li>
-                        <Link className="dropdown-item" to="/All-prudacts">
+                        <Link className="dropdown-item text-capitalize" to="/All-prudacts">
                           all prudacts
                         </Link>
                       </li>
                       <li>
                         <Link
-                          className="dropdown-item"
+                          className="dropdown-item text-capitalize"
                           to="/Prudacts-Catigorys"
                         >
-                          Categories
+                          all Categories page
                         </Link>
                       </li>
                       <CategoriesList Data={categories}  nm2={2} />
                       <CategoriesList Data={categories} nm1={2} nm2={6} />
-                      <CategoriesList Data={categories} nm1={6} nm2={10} />
+                      <CategoriesList Data={categories} nm1={6} nm2={13} />
                     </ul>
                   </div>
                   <div className="DropMenuItemsContainer">
                     <ul>
-                      <CategoriesList Data={categories} nm1={10} nm2={14} />
+                      <CategoriesList Data={categories} nm1={13} nm2={17} />
                     </ul>
                     <NavPrudactData nm1={10} />
                   </div>
                   <div className="DropMenuItemsContainer">
                     <ul>
-                      <CategoriesList Data={categories} nm1={14} nm2={18} />
+                      <CategoriesList Data={categories} nm1={17} nm2={21} />
                     </ul>
                     <NavPrudactData nm1={3} />
                   </div>
                   <div className="DropMenuItemsContainer">
                     <ul>
-                      <CategoriesList Data={categories} nm1={18} nm2={22} />
+                      <CategoriesList Data={categories} nm1={21} nm2={24} />
                     </ul>
                     <NavPrudactData nm1={1} />
                   </div>
-                  <div className="DropMenuItemsContainer">
-                    <ul>
-                      <CategoriesList Data={categories} nm1={22} />
-                    </ul>
-                    <NavPrudactData nm1={2} />
-                  </div>
+                  
                 </div>
               </li>
             </ul>

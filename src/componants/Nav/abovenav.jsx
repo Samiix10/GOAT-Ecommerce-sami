@@ -12,22 +12,26 @@ const AboveNav = () => {
     targets: textHead,
     translateX: ["-100%", "290%"],
     easing: "linear",
-  })
-  const [time, setTime] = useState()
-    const now = new Date();
-    const currentDateTime = now.toLocaleString();
-    useEffect(() => {
-      const update =  ()=> {
-           setTime(currentDateTime);
-       }
+  });
+  const [time, setTime] = useState();
+  const now = new Date();
+  const currentDateTime = now.toLocaleString();
+  useEffect(() => {
+    const update = () => {
+      setTime(currentDateTime);
+    };
     const timerID = setInterval(() => update(), 1000);
     return () => clearInterval(timerID);
   }, [currentDateTime]);
   return (
     <>
-      <div className="aboveNavContainer">
-        <div className="container-fluid">
-         <HeaderAnimation/>
+      <div
+        className={`aboveNavContainer p-3 p-lg-0 pb-lg-2  ${
+          window.location.pathname.length > 1 ? "d-none" : " "
+        }`}
+      >
+        <div className="container-fluid p-0">
+          <HeaderAnimation />
           <div className="container p-0 d-flex justify-content-between">
             <div className="socialIcons1">
               <div className="socialIcons">
@@ -58,10 +62,8 @@ const AboveNav = () => {
               </div>
             </div>
             <div className="DataTime ">
-              <span>
-                {time}
-              </span>
-                </div>
+              <span>{time}</span>
+            </div>
             <div className="socialIcons2  d-none d-lg-block">
               <div className="socialIcons">
                 <span className="PhoneContact">

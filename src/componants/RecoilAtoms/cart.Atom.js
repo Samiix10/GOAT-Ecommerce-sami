@@ -1,13 +1,13 @@
 import { atom } from "recoil";
 
-// let UserData= []
-// if (localStorage.getItem("cartData")) {
-//   UserData = JSON.parse(localStorage.getItem("cartData"));
-// }
+let UserData= []
+if (localStorage.getItem("cartData")) {
+  UserData = JSON.parse(localStorage.getItem("cartData"));
+}
 
 const CartItems = atom({
   key: "cart",
-  default: [],
+  default: UserData,
 })
 
 export default CartItems;

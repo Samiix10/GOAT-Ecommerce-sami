@@ -13,7 +13,6 @@ const Nav = () => {
   const liked = useRecoilValue(LikedItems);
   const [likedquntity, setlikedquntity] = useState();
   const [cartquntity, setcartquntity] = useState();
-  
   useEffect(() => {
 
     setcartquntity(Cart.length);

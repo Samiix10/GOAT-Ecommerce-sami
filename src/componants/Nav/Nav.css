@@ -2,6 +2,7 @@ nav.navbar {
   position: absolute;
   left: 0;
   width: 100%;
+  transition: all .3s ease;
   color: var(--main-color-text) !important;
   padding: 1rem 0;
   & .container {
@@ -300,7 +301,8 @@ background: rgba(60, 66, 81, 0.5);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(1.5px);
   -webkit-backdrop-filter: blur(1.5px);
-  border-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   animation: fadeInDown .5s ease 1;
   z-index: 1000;

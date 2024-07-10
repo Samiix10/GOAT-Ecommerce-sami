@@ -1,0 +1,131 @@
+.LikedMainSection {
+  padding: 9rem 0 5rem;
+  & > .LikedContent {
+    & > .likedContainer {
+      & > .RowLikedContainer {
+        & > .LikedCardMainContent {
+          padding: 0.5rem;
+          & > .likedCardBodyContainer {
+            width: 100%;
+            height: 100%;
+            padding: 4.5rem;
+            margin: 0 auto;
+            border-radius: 50%;
+            background: #3c4251;
+            box-shadow: inset -41px 41px 82px #2e323e,
+              inset 41px -41px 82px #4a5264;
+            overflow: hidden;
+            position: relative;
+            transition: all 2s ease;
+            &:hover {
+              box-shadow: 0px 0px 15px 10px #0bb2d3, 0px 0px 15px #0fe2ff;
+            }
+            &::after {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%) scale(0);
+              content: "";
+              width: 100%;
+              height: 100%;
+              border-radius: 50%;
+              background: linear-gradient(45deg, #0cb6d8, #0ed8ff);
+              transform-origin: var(--x) var(--y);
+              transition: all 0.5s ease;
+            }
+
+            &:hover::after {
+              transform-origin: var(--x) var(--y);
+              transform: translate(-50%, -50%) scale(1);
+            }
+            &:hover > .likedCardContent > .likedCardContentImg > a {
+              transform: scale(1.5);
+            }
+            & > .likedCardContent {
+              position: relative;
+              z-index: 2;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: space-around;
+              width: fit-content;
+              height: 100%;
+              gap: 20px;
+              & > .soldout {
+                position: absolute;
+                top: 25%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 0.5rem 1rem;
+                background-color: #df190b6b;
+                color: var(--main-color-text);
+                backdrop-filter: blur(0.1rem);
+                font-size: 1.2rem;
+                font-weight: 500;
+                font-family: var(--login-font);
+                border-radius: 10px;
+                text-transform: capitalize;
+                width: 100%;
+                pointer-events: none;
+                text-align: center;
+              }
+              & > .likedCardContentImg {
+                width: 100px;
+                height: 100px;
+                position: relative;
+                & > a {
+                  display: block;
+                  width: 100%;
+                  height: 100%;
+                  overflow: hidden;
+                  transition: all 0.5s ease;
+                  & > img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                  }
+                }
+              }
+              & > .likedCardContentText {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                & > h3 {
+                  color: var(--text-logo);
+                  font-family: var(--login-font);
+                  font-weight: 500;
+                  margin: 0;
+                  line-height: 1.7;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (width < 768px) {
+  .LikedMainSection {
+    & > .LikedContent {
+      & > .likedContainer {
+        & > .RowLikedContainer {
+          & > .LikedCardMainContent {
+            & > .likedCardBodyContainer {
+              border-radius: 15px;
+              &::after{
+                border-radius: 50%;
+              }
+              &:hover::after {
+                border-radius: 15px;
+                transform-origin: center center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

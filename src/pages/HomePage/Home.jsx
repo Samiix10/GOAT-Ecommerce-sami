@@ -1,14 +1,13 @@
 import { useRecoilState } from "recoil";
 import "./Home.css";
 import CartItems from "../../componants/RecoilAtoms/cart.Atom";
-
 import LikedItems from "../../componants/RecoilAtoms/liked.Atom";
-import CardHome from "../../componants/homeComp/CardHomeSliders";
 import HomeSlider from "../../componants/homeComp/HomeSLider";
 import HomeSecoundSection from "../../componants/homeComp/secoundComp/SecoundSec";
 import ThirdHome from "../../componants/homeComp/thirdHome/ThirdHome";
 import FourthHomeSec from "../../componants/homeComp/fourthSec/FourthHomesec";
 import FifthSectionHome from "../../componants/homeComp/fifthSection/FiFthsection";
+import { useEffect } from "react";
 
 const Home = () => {
   const [Cart, setCart] = useRecoilState(CartItems);
@@ -49,9 +48,16 @@ const Home = () => {
   function deleteItem(id) {
     setCart(DeletItemFromCart(Cart, Cart.findIndex((item) => item.id === id)));
   }
+   function gotoTop() {
+     window.scrollTo(0, 0);
+   }
+  useEffect(() => {
+     gotoTop();
+  },[])
   return (
     <section className="home ">
       <div className="container-fluid">
+        <div className="ContainerBackGround">
         <div className="HomeHeader text-center ">
           <span>
             clothes set
@@ -63,13 +69,14 @@ const Home = () => {
         <div className="HomeContent">
           <HomeSlider/>
         </div>
+        </div>
         <div className="secound-home">
           <HomeSecoundSection/>
         </div>
         <div className="thirdHomeSection">
           <ThirdHome/>
         </div>
-        <div className="FourthHomeMain">
+        <div className="FourthHomeMain pt-5">
           <FourthHomeSec/>
         </div>
         <div className="fifthHomeMain">

@@ -13,29 +13,29 @@
             align-items: center;
             height: 100%;
             & > .productBoxContainerText {
-              & > .OverAllRating{
+              & > .OverAllRating {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                & > span{
+                & > span {
                   display: block;
                   font-size: clamp(1rem, 1.5rem + 2vw, 1.5rem);
                   &.star {
-                      position: relative;
-                      display: block;
-                      overflow: hidden;
-                      font-size: 2rem;
-                      font-weight: 900;
-                      &::before {
-                        content: "☆☆☆☆☆";
-                        position: absolute;
-                        height: 100%;
-                        background-color: var(--new-color);
-                        width: var(--width);
-                        color: transparent;
-                        background-clip: text;
-                      }
+                    position: relative;
+                    display: block;
+                    overflow: hidden;
+                    font-size: 2rem;
+                    font-weight: 900;
+                    &::before {
+                      content: "☆☆☆☆☆";
+                      position: absolute;
+                      height: 100%;
+                      background-color: var(--new-color);
+                      width: var(--width);
+                      color: transparent;
+                      background-clip: text;
                     }
+                  }
                 }
               }
               & > .productBoxContentText {
@@ -48,17 +48,27 @@
                   font-size: clamp(1rem, 1.5rem + 2vw, 1.5rem);
                   font-weight: 400;
                   font-family: var(--text-font-main);
-                  letter-spacing: 1px;
-                  line-height: 1.7rem;
+                  letter-spacing: 1.1px;
+                  line-height: 1.8rem;
+                  text-wrap: wrap;
+                  word-break: break-all;
                 }
-                & > span {
-                  font-size: clamp(1rem, 1.5rem + 2vw, 1.5rem);
-                  font-weight: 800;
-                  font-family: var(--text-font-main);
-                  letter-spacing: 1px;
-                  line-height: 1.7rem;
-                  margin-bottom: 1rem;
-                  display: block;
+                & > .moreIn {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  width: 100%;
+                  flex-wrap: wrap;
+                  gap: 5px;
+                  > span {
+                    font-size: clamp(1rem, 1.5rem + 2vw, 1.5rem);
+                    font-weight: 800;
+                    font-family: var(--text-font-main);
+                    letter-spacing: 1px;
+                    line-height: 1.7rem;
+                    
+                    display: block;
+                  }
                 }
                 & > .productAction {
                   width: 100%;
@@ -148,7 +158,7 @@
                         box-shadow: 0px 2.5px 24.6px rgba(0, 0, 0, 0.02),
                           0px 20px 33px rgba(0, 0, 0, 0.04);
                       }
-                      &:disabled{
+                      &:disabled {
                         pointer-events: none;
                       }
                     }
@@ -190,25 +200,102 @@
                     }
                   }
                 }
+                & > .WarantyInfo{
+                  text-align: center;
+                  padding: .5rem 0;
+                  font-size: 1.2rem;
+                  font-weight: 500;
+                  text-transform: uppercase;
+                }
               }
             }
-            & > .productBoxContainerImg{
-              padding: .5rem;
+            & > .productBoxContainerImg {
+              padding: 0.5rem;
               width: 100%;
               height: 100%;
-              & > .productBoxContentImg{
+              & > .productBoxContentImg {
                 width: 100%;
-                & > .ImgPrudact{
+                & > .ImgPrudact {
                   overflow: hidden;
                   width: 100%;
                   height: 500px;
+                  position: relative;
+                  & > .instoke {
+                    text-transform: uppercase;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    font-size: 1.2rem;
+                    letter-spacing: 1px;
+                    padding: .5rem;
+                    border-radius: 10px;
+                    background-color: transparent;
+                    border: 1px solid rgb(255,255 ,255 , .2);
+                  }
+                  & > .Policy{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    font-size: 1.2rem;
+                    text-transform: uppercase;
+                    background-color: #df190b50 ;
+                    border: 1px solid #ffffff30;
+                    border-radius: 10px;
+                    padding: .5rem;
+                  }
                   & > img {
                     object-fit: contain;
                     width: 100%;
                     height: 100%;
                   }
+                  & > .mySwiper2 {
+                    width: 100%;
+                    height: 80%;
+                    & > .swiper-wrapper {
+                      & > .swiper-slide {
+                        & > .swiper-zoom-container {
+                          width: 100%;
+                          height: 100%;
+                          & > img {
+                            object-fit: contain;
+                            width: 100%;
+                            height: 100%;
+                            cursor: zoom-in;
+                            &:hover {
+                              transform: scale(1.3);
+                              transform-origin: var(--transformX) var(--transy);
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                  & > .mySwiper {
+                    width: 100%;
+                    height: 20%;
+                    & > .swiper-wrapper {
+                      justify-content: center;
+                      & > .swiper-slide {
+                        transform: all 0.5s ease;
+                        & > img {
+                          object-fit: contain;
+                          width: 100%;
+                          height: 100%;
+                        }
+                      }
+                      & > .swiper-slide-thumb-active,
+                      & > .swiper-slide-active {
+                        transform: scale(1.2);
+                      }
+                      &
+                        > .swiper-slide-active:has(
+                          ~ .swiper-slide-thumb-active
+                        ) {
+                        transform: scale(1);
+                      }
+                    }
+                  }
                 }
-
               }
             }
           }
@@ -218,6 +305,14 @@
     & > .prudactRevewContainer {
       padding: 1rem 0;
       & > .prudactRevewRow {
+        & > .revcontainer {
+          & > span {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: var(--new-color);
+          }
+        }
         & > .RevewCollContainer {
           & > .revewBoxContainer {
             padding: 0.5rem;
@@ -228,29 +323,29 @@
               box-shadow: -20px 9px 52px rgba(0, 0, 0, 0.572);
               -webkit-backdrop-filter: blur(17.5px);
               border: 1px solid rgba(255, 255, 255, 0.761);
-              & > .rowRevew{
-                & > .revewImgCol{
-                  padding: .5rem;
+              & > .rowRevew {
+                & > .revewImgCol {
+                  padding: 0.5rem;
                   display: flex;
                   align-items: center;
                   justify-content: center;
-                  & > .revewImg{
+                  & > .revewImg {
                     overflow: hidden;
                     width: 100px;
                     height: 100px;
                     border-radius: 50%;
-                    & > img{
+                    & > img {
                       width: 100%;
                       object-fit: cover;
                       aspect-ratio: 1/1;
                     }
                   }
                 }
-                & > .revewTextCol{
-                  padding: .5rem;
+                & > .revewTextCol {
+                  padding: 0.5rem;
                   display: flex;
                   align-items: center;
-                  & > .revewText{
+                  & > .revewText {
                     position: relative;
                     font-weight: 400;
                     font-family: var(--text-font-main);
@@ -265,7 +360,7 @@
                         text-transform: capitalize;
                       }
                       &.Date {
-                        font-size: .5rem;
+                        font-size: 0.5rem;
                         font-weight: 400;
                       }
                     }
@@ -273,7 +368,7 @@
                       margin: 0;
                       text-transform: capitalize;
                     }
-                    & > .rating{
+                    & > .rating {
                       display: flex;
                       align-items: center;
                       justify-content: space-between;
@@ -288,15 +383,15 @@
                         color: transparent;
                         background-clip: text;
                          */
-                      &::before{
-                        content: "☆☆☆☆☆";
-                        position: absolute;
-                        height: 100%;
-                        background-color: var(--new-color);
-                        width: var(--width);
-                        color: transparent;
-                        background-clip: text;
-                      }
+                        &::before {
+                          content: "☆☆☆☆☆";
+                          position: absolute;
+                          height: 100%;
+                          background-color: var(--new-color);
+                          width: var(--width);
+                          color: transparent;
+                          background-clip: text;
+                        }
                       }
                     }
                   }
@@ -308,4 +403,10 @@
       }
     }
   }
+}
+
+
+
+.spinner-grow {
+  margin:  .5rem;
 }

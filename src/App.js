@@ -7,23 +7,26 @@ import {
   SinglePrudact,
   Categories,
   PrudactByCategory,
-  SinglePrudactF,
 } from "./pages/PrudactPage/Prudact";
 import Cart from "./pages/CartPage/Cart";
 import LikedItemsProvider from "./pages/LikedPage/Liked";
 import SearchResult from "./pages/SearchPage/Search";
+import { Toaster } from "react-hot-toast";
+
 
 
 function App() {
+  
   return (
     <>
+      <Toaster />
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/All-prudacts" element={<AllPrudact />} />
         <Route path="/Prudacts-Catigorys" element={<Categories />} />
         <Route path="/Get-Prodact-Details/:id" element={<SinglePrudact />} />
-        <Route path="/Get-prodact-Detail/:id" element={<SinglePrudactF />} />
+
         <Route
           path="/Get-Prodact-of/:catigory"
           element={<PrudactByCategory />}

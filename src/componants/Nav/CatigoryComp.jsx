@@ -4,6 +4,7 @@ const CategoriesList = (props) => {
   const Data = props.Data;
   const num1 = props.nm1;
   const num2 = props.nm2;
+  const close = props.close;
 
   return (
     <>
@@ -11,11 +12,12 @@ const CategoriesList = (props) => {
         return (
           <li key={index}>
             <Link
-              className={`dropdown-item`}
+              className={`dropdown-item text-capitalize`}
               to={`/Get-Prodact-of/${category}`}
               data-path={`/Get-Prodact-of/${category}`}
+              onClick={close}
             >
-              {category}
+              {category.split("-").join(" ")}
             </Link>
           </li>
         );
