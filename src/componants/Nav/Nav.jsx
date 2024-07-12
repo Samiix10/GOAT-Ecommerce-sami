@@ -93,8 +93,8 @@ const Nav = () => {
                     <i className="fa-solid fa-user fa-2xl" style={{color: "#ffffff"}}></i>
                 </span>
                 <ul className="dropdown-menu user-Drop-Menu" id="Drop">
-                  <li className="DropUserInfo"><Link to={"/"}>login</Link></li>
-                  <li className="DropUserInfo"><Link to={"/"}>register</Link></li>
+                  <li className="DropUserInfo"><Link to={"/Login-Page"}>login</Link></li>
+                  <li className="DropUserInfo"><Link to={"/Register-Page"}>register</Link></li>
                 </ul>
               </li>
             </ul>

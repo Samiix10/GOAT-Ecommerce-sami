@@ -12,11 +12,9 @@ import Cart from "./pages/CartPage/Cart";
 import LikedItemsProvider from "./pages/LikedPage/Liked";
 import SearchResult from "./pages/SearchPage/Search";
 import { Toaster } from "react-hot-toast";
-
-
+import Register, { Login } from "./pages/logPage/LogINPage";
 
 function App() {
-  
   return (
     <>
       <Toaster />
@@ -34,6 +32,8 @@ function App() {
         <Route path="/Cart" element={<Cart />} />
         <Route path="/liked-Prudact" element={<LikedItemsProvider />} />
         <Route path="/search/:title" element={<SearchResult />} />
+        <Route path="/Register-Page" element={<Register />} />
+        <Route path="/Login-Page" element={<Login />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </>
