@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import LikedItems from "../../RecoilAtoms/liked.Atom";
 import logo from "../../../assits/NavAssits/logoo.png";
 import { NavItems1, NavItems2 } from "../NavItemsComp/navItems";
-import NavOffCan from "../NavItemsComp/offCanNav";
+import { NavOffCanUser } from "../NavItemsComp/offCanNav";
 import AboveNav from "../abovenav";
 const UserNav = () => {
   const Cart = useRecoilValue(CartItems);
@@ -105,7 +105,7 @@ const UserNav = () => {
               </li>
             </ul>
           </div>
-          <NavOffCan/>
+          <NavOffCanUser/>
         </div>
       </nav>
     </>
