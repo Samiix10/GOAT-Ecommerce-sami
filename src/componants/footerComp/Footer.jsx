@@ -1,6 +1,5 @@
 import "./footerMain.css";
 import logo from "../../assits/photosforlogpages/goaat.jpeg";
-import { useEffect, useState } from "react";
 import { useHref } from "react-router-dom";
 
 const Footer = () => {
