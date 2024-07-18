@@ -329,7 +329,7 @@ const Categories = () => {
             <div
               className={`nav ${
                 currentTab ? "flex-md-column me-md-3" : "  "
-              } gap-3 flex-wrap nav-pills   position-sticky top-0 `}
+              } gap-3 flex-wrap nav-pills   sticky-md-top`}
               id="v-pills-tab"
               role="tablist"
               aria-orientation="vertical"
