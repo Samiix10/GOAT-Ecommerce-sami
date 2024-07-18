@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "./Prudact.css";
 import { useRecoilState } from "recoil";
 import LikedItems from "../../componants/RecoilAtoms/liked.Atom";
@@ -151,8 +151,12 @@ const SinglePrudact = () => {
                           <span>you can't buy it sorry</span>
                         </button>
                       ) : (
-                        <button className="Order">
-                          <span>Buy Now</span>
+                          <button className="Order">
+                            <span>
+                              <Link to={`/checkOutForOneNow/${item.id}`}>
+                              Buy Now
+                              </Link>
+                            </span>
                         </button>
                       )}
                       {item.stock === 0 ? (

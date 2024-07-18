@@ -1,13 +1,22 @@
 import { atom } from "recoil";
 
-let UserData= []
-if (localStorage.getItem("cartData")) {
-  UserData = JSON.parse(localStorage.getItem("cartData"));
-}
+let glopalCart = [];
+if (
+  localStorage.getItem("cartData") &&
+  localStorage.getItem("loggedUser").UserCart
+) {
+  glopalCart = JSON.parse([
+    ...localStorage.getItem("cartData"),
+    ...localStorage.getItem("loggedUser").UserCart,
+  ]);
+}else if ( localStorage.getItem("cartData") ||
+  localStorage.getItem("loggedUser").UserCart) {
+  glopalCart = JSON.parse(localStorage.getItem("cartData")) || JSON.parse(localStorage.getItem("loggedUser").UserCart);
+  }
 
 const CartItems = atom({
   key: "cart",
-  default: UserData,
-})
+  default: glopalCart,
+});
 
 export default CartItems;

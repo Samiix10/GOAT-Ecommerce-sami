@@ -1,4 +1,5 @@
 .CartSectionMain {
+  min-height: calc(100vh - 245px);
   & > .CartSectionContainer {
     & > .table {
       vertical-align: middle;

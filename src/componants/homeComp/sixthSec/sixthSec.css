@@ -1,0 +1,174 @@
+.SixthSecMain{
+  background-color: var(--main-color-bg);
+  padding: 11rem 0;
+  & > .sixthSecContainer {
+    & > .SixthSecTitle {
+      & > h1 {
+        font-family: var(--Header-font);
+        letter-spacing: 1px;
+        word-spacing: 2px;
+      }
+    }
+    & > .SixSecContentMain {
+      & > .SixthSecContentMainBox {
+        padding: 0;
+        & > .SixthContentBox {
+          padding: 5rem 1rem;
+          border-radius: 10px;
+          position: relative;
+          background-image: url(../../../assits/photosforlogpages/logo-goat.jpeg);
+          background-size: cover;
+          background-position: center;
+          border: 1px solid #fff;
+          & > .FirstOverLay {
+            position: absolute;
+            top:-1px;
+            left: -1px;
+            /* transform: translateY( -25%); */
+            display: block;
+            padding: 1rem;
+            background-color: var(--main-color-bg);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            word-spacing: 2px;
+            font-family: var(--login-font);
+            border-right: 1px solid rgba(255, 255, 255);
+            border-bottom: 1px solid rgba(255, 255, 255);
+            border-bottom-right-radius: 15px;
+            & > span {
+              position: relative;
+              z-index: 2;
+              backdrop-filter: blur(5px);
+            }
+            &::after {
+            content: "";
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
+              position: absolute;
+              filter: blur(5px);
+              background-color: #ffffff31;
+            }
+          }
+          & > .Secondoverlay{
+            position: absolute;
+            bottom: -1px;
+            right: -1px;
+            /* transform: translateY( -25%); */
+            display: block;
+            padding: 1rem;
+            background-color: var(--main-color-bg);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            word-spacing: 2px;
+            font-family: var(--login-font);
+            border-left: 1px solid rgba(255, 255, 255);
+            border-top: 1px solid rgba(255, 255, 255);
+            border-top-left-radius: 15px;
+            & > span {
+              position: relative;
+              z-index: 2;
+            }
+            &::after {
+              content: "";
+              width: 100%;
+              height:100%;
+              top: 0;
+              left: 0;
+              position: absolute;
+              filter: blur(5px);
+              background-color: #ffffff31;
+          }
+        }
+          & > .SixthContent {
+            height: 300px;
+            & > .ContentBoxBody {
+              width: 100%;
+              height: 100%;
+              overflow: hidden;
+              & > .contentBox {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                background-color: #ffffff22;
+                backdrop-filter: blur(2px);
+                padding: .5rem;
+                border-radius: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                & > .FirstCard {
+                  border-radius: 15px;
+                  overflow: hidden;
+                  width: 10%;
+                  height: 100%;
+                  transition: all .5s ease;
+                  position: relative;
+                  &::before{
+                    width: 100%;
+                    height:0;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    content: "";
+                    transition: all .3s ease;
+                  }
+                  &:hover::before{
+                    height: 100%;
+                  }
+                  &.First{
+                    background-image: url(../../../assits/photosforlogpages/goaat.jpeg);
+                    background-size: cover;
+                    background-position: center;
+                  }
+                  &.Second{
+                    background-image: url(../../../assits/photosforlogpages/goatlogo.jpeg);
+                    background-size: cover;
+                    background-position: center;
+                  }
+                  &.Third{
+                    background-image: url(../../../assits/photosforlogpages/goatlogoword.jpeg);
+                    background-size: cover;
+                    background-position: center;
+                  }
+                  &.Fourth{
+                    background-image: url(../../../assits/photosforlogpages/oatlogopy.jpeg);
+                    background-size: cover;
+                    background-position: center;
+                  }
+                  & > .FirstCardBody {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    position: absolute;
+                    top: 0;
+                    left:200%;
+                    transition: all .5s ease;
+                    padding: 0 1rem;
+                    & > h3 {
+                      border-block-end: 1px solid var(--bs-info);
+                    }
+                    & > p {
+                      text-align: center;
+                    }
+                  }
+                  &:hover {
+                    flex-grow: 1;
+                  }
+                  &:hover>.FirstCardBody{
+                    left: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

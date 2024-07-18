@@ -410,3 +410,7 @@
 .spinner-grow {
   margin:  .5rem;
 }
+
+.CategoriesSectionMain {
+  min-height: calc(100vh - 245px);
+}

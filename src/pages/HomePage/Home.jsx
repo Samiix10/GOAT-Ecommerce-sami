@@ -8,6 +8,7 @@ import ThirdHome from "../../componants/homeComp/thirdHome/ThirdHome";
 import FourthHomeSec from "../../componants/homeComp/fourthSec/FourthHomesec";
 import FifthSectionHome from "../../componants/homeComp/fifthSection/FiFthsection";
 import { useEffect } from "react";
+import SixSection from "../../componants/homeComp/sixthSec/sixthsection";
 
 const Home = () => {
   const [Cart, setCart] = useRecoilState(CartItems);
@@ -51,12 +52,15 @@ const Home = () => {
    function gotoTop() {
      window.scrollTo(0, 0);
    }
-  useEffect(() => {
-     gotoTop();
-  },[])
+  // useEffect(() => {
+  //    gotoTop();
+  // },[])
   return (
     <section className="home ">
       <div className="container-fluid">
+        <div className="SixHomeMain">
+          <SixSection/>
+        </div>
         <div className="ContainerBackGround">
         <div className="HomeHeader text-center ">
           <span>

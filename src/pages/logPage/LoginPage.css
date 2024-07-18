@@ -73,7 +73,17 @@
           flex-direction: column;
           padding: .5rem 0;
           width: 100%;
-          & > input {
+          & > .password , .confirm {
+            position: relative;
+            & > label {
+              position: absolute;
+              right: 2%;
+              top: 50%;
+              transform: translateY(-50%);
+            }
+          }
+          & > input , .password > input , .confirm > input {
+            width: 100%;
             padding: .5rem;
             border-radius: 15px;
             border: 2px solid var(--bs-blue);

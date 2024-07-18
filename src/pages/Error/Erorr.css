@@ -1,0 +1,12 @@
+.error-container {
+  padding: 5rem 0;
+  min-height: calc(100vh - 245px);
+  & > h1 {
+    & > span {
+      color: var(--new-color);
+    }
+  }
+  & > p {
+    text-transform: uppercase;
+  }
+}

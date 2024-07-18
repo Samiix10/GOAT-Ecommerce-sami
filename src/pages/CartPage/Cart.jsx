@@ -17,12 +17,12 @@ const Cart = () => {
     window.scrollTo(0, 0);
   }
   function deleteItem(id) {
-    setCart(
-      DeletItemFromCart(
-        Cart,
-        Cart.findIndex((item) => item.id === id)
-      )
+    const NewCart = DeletItemFromCart(
+      Cart,
+      Cart.findIndex((item) => item.id === id)
     );
+    setCart(NewCart);
+    localStorage.setItem("cartData" , JSON.stringify(NewCart))
     toast.success("item deleted successfully");
   }
   useEffect(() => {
@@ -45,7 +45,8 @@ const Cart = () => {
               </tr>
             </thead>
             <tbody>
-              {Cart.map((item, index) => (
+              { Cart.length> 0 ?
+                Cart.map((item, index) => (
                 <tr key={index}>
                   <td className="d-none d-md-table-cell">
                     <span className="ItemThub mx-auto ">
@@ -190,7 +191,14 @@ const Cart = () => {
                     </button>
                   </td>
                 </tr>
-              ))}
+                )) : (
+                  <tr>
+                    <td colSpan="7" className="text-center text-uppercase fs-4">
+                      Your cart is empty
+                    </td>
+                  </tr>
+                )
+            }
             </tbody>
             <tfoot>
               <tr>
@@ -226,7 +234,8 @@ const Cart = () => {
                               (cur.discountPercentage / 100) *
                               cur.price
                             ).toFixed(2)) *
-                            cur.quantity, 0
+                            cur.quantity,
+                        0
                       ).toFixed(2)}
                     </span>
                   </div>
@@ -240,7 +249,10 @@ const Cart = () => {
                 </td>
                 <td className="text-center d-table-cell d-md-none">
                   <Link to="/checkout">
-                    <button className="btn btn-success">Checkout</button>
+                    <button className="btn btn-success">
+                      {" "}
+                      <Link to={"/checkOut"}>Checkout</Link>
+                    </button>
                   </Link>
                 </td>
               </tr>

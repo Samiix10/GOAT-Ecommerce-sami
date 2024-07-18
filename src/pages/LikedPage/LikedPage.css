@@ -1,4 +1,5 @@
 .LikedMainSection {
+  min-height: calc(100vh - 245px);
   padding: 9rem 0 5rem;
   & > .LikedContent {
     & > .likedContainer {

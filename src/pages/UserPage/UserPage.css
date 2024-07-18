@@ -1,0 +1,7 @@
+.UserINfo{
+  border: 1px solid #fff;
+  padding: .5rem;
+  border-radius: 5px;
+  background-color: #ffffff15;
+  backdrop-filter: blur(10px);
+}
